@@ -1,6 +1,6 @@
 ## gitbook-plugin-github
 
-Display a link to a GitHub repo along with the sharing links.
+Display a link to your GitHub repo in your gitbook.
 
 ### Usage
 

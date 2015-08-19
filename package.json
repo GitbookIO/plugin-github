@@ -1,12 +1,12 @@
 {
   "name": "gitbook-plugin-github",
   "version": "1.0.1",
-  "description": "",
+  "description": "Display a link to your GitHub repo in your gitbook",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Michael Jackson",
   "license": "ISC",
   "engines": {
     "gitbook": "*"
