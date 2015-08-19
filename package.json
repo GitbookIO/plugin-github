@@ -1,6 +1,6 @@
 {
   "name": "gitbook-plugin-github",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Display a link to your GitHub repo in your gitbook",
   "main": "index.js",
   "scripts": {
