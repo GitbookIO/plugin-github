@@ -1,4 +1,4 @@
-## gitbook-plugin-github
+## plugin-github
 
 Display a link to your GitHub repo in your gitbook.
 
@@ -8,12 +8,12 @@ Put this in your book.json:
 
 ```js
 {
-  "plugins": [ "github" ],
-  "pluginsConfig": {
-    "github": {
-      "url": "https://github.com/your/repo"
+    "plugins": [ "github" ],
+    "pluginsConfig": {
+        "github": {
+            "url": "https://github.com/your/repo"
+        }
     }
-  }
 }
 ```
 
