@@ -18,3 +18,8 @@ Put this in your book.json:
 ```
 
 And you're done!
+
+### Credits
+
+Original work by [@mjackson](https://github.com/mjackson).
+
