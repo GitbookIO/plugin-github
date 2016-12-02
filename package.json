@@ -1,7 +1,9 @@
 {
+  "title": "Github Sharing",
   "name": "gitbook-plugin-github",
   "version": "2.0.0",
   "description": "Display a link to your GitHub repo in your gitbook",
+  "keywords": ['github', 'sharing', 'repository'],
   "main": "index.js",
   "authors": [
     {
@@ -17,6 +19,16 @@
     "url": "https://github.com/GitbookIO/plugin-github.git"
   },
   "license": "Apache-2.0",
+  "browser": "./_assets/plugin.js",
+  "ebook": "./_assets/plugin.js",
+  "dependencies": {
+    "gitbook-core": "^4.0.0"
+  },
+  "devDependencies": {
+    "gitbook-plugin": "^4.0.0",
+    "eslint": "3.7.1",
+    "eslint-config-gitbook": "1.4.0"
+  },
   "engines": {
     "gitbook": ">=4.0.0-alpha.0"
   },
@@ -29,11 +41,10 @@
       }
     }
   },
-  "dependencies": {
-    "gitbook-core": "^4.0.0"
-  },
-  "devDependencies": {
-    "eslint-config-gitbook": "^1.4.0",
-    "gitbook-plugin": "^4.0.0"
+  "scripts": {
+    "lint": "eslint ./",
+    "build-website": "gitbook-plugin build ./src/index.js ./_assets/plugin.js",
+    "prepublish": "npm run build-website",
+    "test": "gitbook-plugin test && npm run lint"
   }
 }

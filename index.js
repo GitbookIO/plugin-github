@@ -1,10 +1,10 @@
-module.exports = {
-  
-  website: {
-    assets: './assets',
-    js: [
-      'plugin.js'
-    ]
-  }
 
+module.exports = {
+    blocks: {
+
+    },
+
+    hooks: {
+
+    }
 };
