@@ -1,32 +1,50 @@
 {
-    "name": "gitbook-plugin-github",
-    "version": "2.0.0",
-    "description": "Display a link to your GitHub repo in your gitbook",
-    "main": "index.js",
-    "authors": [
-        {
-            "name": "Michael Jackson"
-        },
-        {
-            "name": "Samy Pessé",
-            "email": "samy@gitbook.com"
-        }
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/GitbookIO/plugin-github.git"
+  "title": "Github Sharing",
+  "name": "gitbook-plugin-github",
+  "version": "2.0.0",
+  "description": "Display a link to your GitHub repo in your gitbook",
+  "keywords": ["gitbook:social", "github", "sharing", "repository"],
+  "main": "index.js",
+  "authors": [
+    {
+      "name": "Michael Jackson"
     },
-    "license": "Apache-2.0",
-    "engines": {
-        "gitbook": ">=2.5.0"
-    },
-    "gitbook": {
-        "properties": {
-            "url": {
-                "type": "string",
-                "required": true,
-                "title": "URL to your GitHub repository"
-            }
-        }
+    {
+      "name": "Samy Pessé",
+      "email": "samy@gitbook.com"
     }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GitbookIO/plugin-github.git"
+  },
+  "license": "Apache-2.0",
+  "browser": "./_assets/plugin.js",
+  "ebook": "./_assets/plugin.js",
+  "dependencies": {
+    "gitbook-core": "^4.0.0"
+  },
+  "devDependencies": {
+    "gitbook-plugin": "^4.0.0",
+    "eslint": "3.7.1",
+    "eslint-config-gitbook": "1.4.0"
+  },
+  "engines": {
+    "gitbook": ">=4.0.0-alpha.0"
+  },
+  "gitbook": {
+    "properties": {
+      "url": {
+        "type": "string",
+        "required": true,
+        "title": "URL to your GitHub repository"
+      }
+    }
+  },
+  "scripts": {
+    "lint": "eslint ./",
+    "build-website": "gitbook-plugin build ./src/index.js ./_assets/plugin.js",
+    "prepublish": "npm run build-website",
+    "test": "gitbook-plugin test && npm run lint"
+  }
 }
