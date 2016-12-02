@@ -14,7 +14,8 @@ const SharingButtons = React.createClass({
 
         return (
             <GitBook.ButtonGroup>
-                <GitBook.Button href={url} active={Boolean(url)}>
+                <GitBook.Button active={Boolean(url)}
+                                onClick={() => window.open(url)}>
                     <GitBook.Icon id="github"/>
                 </GitBook.Button>
             </GitBook.ButtonGroup>
@@ -23,8 +24,7 @@ const SharingButtons = React.createClass({
 });
 
 function mapStateToProps(state) {
-    const options = state.config.getIn(['pluginsConfig', 'github']) || {};
-    const { url = '' } = options;
+    const url = state.config.getIn(['pluginsConfig', 'github', 'url']);
 
     return {
         url
