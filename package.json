@@ -3,7 +3,7 @@
   "name": "gitbook-plugin-github",
   "version": "2.0.0",
   "description": "Display a link to your GitHub repo in your gitbook",
-  "keywords": ['github', 'sharing', 'repository'],
+  "keywords": ["gitbook:social", "github", "sharing", "repository"],
   "main": "index.js",
   "authors": [
     {
