@@ -1,8 +1,11 @@
 {
+    "title": "GitHub",
     "name": "gitbook-plugin-github",
     "version": "2.0.0",
+    "icon": "./icon.png",
     "description": "Display a link to your GitHub repo in your gitbook",
     "main": "index.js",
+    "browser": "./_assets/plugin.js",
     "authors": [
         {
             "name": "Michael Jackson"
@@ -12,20 +15,32 @@
             "email": "samy@gitbook.com"
         }
     ],
+    "devDependencies": {
+      "gitbook-plugin": "^4.0.0-alpha.0",
+      "eslint": "^3.7.1",
+      "eslint-config-gitbook": "^1.5.0"
+    },
     "repository": {
         "type": "git",
         "url": "https://github.com/GitbookIO/plugin-github.git"
     },
     "license": "Apache-2.0",
     "engines": {
-        "gitbook": ">=2.5.0"
+        "gitbook": ">=4.0.0-alpha.0"
+    },
+    "keywords": [
+      "gitbook:social"
+    ],
+    "scripts": {
+      "build-js": "gitbook-plugin build ./src/index.js ./_assets/plugin.js",
+      "prepublish": "npm run build-js"
     },
     "gitbook": {
         "properties": {
             "url": {
                 "type": "string",
                 "required": true,
-                "title": "URL to your GitHub repository"
+                "title": "URL of your GitHub repository"
             }
         }
     }
