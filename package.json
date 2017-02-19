@@ -1,7 +1,7 @@
 {
     "title": "GitHub",
     "name": "gitbook-plugin-github",
-    "version": "2.0.0",
+    "version": "3.0.0",
     "icon": "./icon.png",
     "description": "Integrate your website with your GitHub repository.",
     "main": "index.js",
